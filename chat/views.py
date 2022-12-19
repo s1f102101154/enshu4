@@ -1,8 +1,9 @@
 from django.shortcuts import render
+#
 from django.views import generic
 from django.conf import settings
-
 from newsapi import NewsApiClient
+#
 
 # Create your views here.
 def index(request):
@@ -32,6 +33,7 @@ def news2(request):
 def news3(request):
     return render(request, "news/news3.html")
 
+#
 class IndexView(generic.TemplateView):
     template_name = "chat/templates/chat/index.html"
 
@@ -41,3 +43,4 @@ class IndexView(generic.TemplateView):
         context['top_headlines'] = newsapi.get_top_headlines(country='jp')
         # print(context['top_headlines'])
         return context
+#

@@ -34,8 +34,10 @@ INSTALLED_APPS = [
     'chat',
     'authtest',
     'accounts',
+#
     'newsapi',
     'news',
+#
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,8 +46,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+#
 from . import newsapi
 NEWSAPI = newsapi.NEWS_API
+#
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
