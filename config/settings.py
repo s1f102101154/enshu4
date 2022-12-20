@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'accounts',
 #
     'newsapi',
-    'news',
 #
     'django.contrib.admin',
     'django.contrib.auth',
