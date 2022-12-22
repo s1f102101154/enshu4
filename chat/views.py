@@ -41,6 +41,6 @@ class IndexView(generic.TemplateView):
         context = super(IndexView, self).get_context_data(**kwargs)
         newsapi = NewsApiClient(api_key=settings.NEWSAPI)
         context['top_headlines'] = newsapi.get_top_headlines(country='jp')
-        # print(context['top_headlines'])
+        print(context['top_headlines'])
         return context
 #
