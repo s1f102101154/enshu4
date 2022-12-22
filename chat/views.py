@@ -40,7 +40,7 @@ class IndexView(generic.TemplateView):
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
         newsapi = NewsApiClient(api_key=settings.NEWSAPI)
-        context['top_headlines'] = newsapi.get_everything(q='乃木坂46')
+        context['top_headlines'] = newsapi.get_everything(q='キンプリ')
         print(context['top_headlines'])
         return context
 #
