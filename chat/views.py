@@ -35,7 +35,7 @@ def news3(request):
 
 #
 class IndexView(generic.TemplateView):
-    template_name = "chat/templates/chat/index.html"
+    template_name = "chat/index.html"
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
