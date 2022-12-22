@@ -1,32 +1,35 @@
 {% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <title>news</title>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="/">NEWS</a>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/"><img src="https://illalet.com/wp-content/uploads/2018/10/16_2_281.png" width="40px" height="40px"></a>
-                </li>
-            </ul>
-        </div>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SampleNews</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style type="text/css">
+      a { text-decoration:none; }
+      a:link { color : #000000; }
+      a:visited { color : #000000; }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar is-fixed-top is-light" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <h3 class="title is-3"><a class="navbar-item" href="#">SampleNews</a></h3>
+      </div>
     </nav>
-    <main>
-        <section class="section">
-            {% block body %}{% endblock %}
-        </section>
-    </main>
-    <footer class="py-2 bg-dark">
-        <p class="m-0 text-center text-white">INIAD Basic Practice Team8 2022</p>
-    </footer>
-    {% block extra_js %}
-    {% endblock %}
-</body>
+
+  <section class="section">
+      {% block body %}{% endblock %}
+  </section>
+
+  <style>
+  body {
+    padding-top: 30px;
+  }
+  </style>
+  </body>
 </html>
