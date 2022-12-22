@@ -44,3 +44,13 @@ class IndexView(generic.TemplateView):
         print(context['top_headlines'])
         return context
 #
+
+class IndexView2(generic.TemplateView):
+    template_name = "chat/sport.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView2, self).get_context_data(**kwargs)
+        newsapi = NewsApiClient(api_key=settings.NEWSAPI)
+        context['top_headlines'] = newsapi.get_everything(q='スポーツ')
+        print(context['top_headlines'])
+        return context
