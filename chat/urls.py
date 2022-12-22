@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     #ヘッダー
-    path("", views.index, name="index"),
+    path("", views.IndexView.as_view(), name="index"),
     path("weather", views.weather, name="weather"),
     path("politics", views.politics, name="politics"),
     path("sport", views.sport, name="sport"),
