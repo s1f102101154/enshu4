@@ -51,6 +51,6 @@ class IndexView2(generic.TemplateView):
     def get_context_data(self, **kwargs):
         context = super(IndexView2, self).get_context_data(**kwargs)
         newsapi = NewsApiClient(api_key=settings.NEWSAPI)
-        context['top_headlines'] = newsapi.get_everything(categry='sports')
+        context['top_headlines'] = newsapi.get_everything(category='sports')
         print(context['top_headlines'])
         return context
