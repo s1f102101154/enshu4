@@ -64,3 +64,13 @@ class IndexView3(generic.TemplateView):
         context['top_headlines'] = newsapi.get_top_headlines(q='IT')
         print(context['top_headlines'])
         return context
+
+class IndexView4(generic.TemplateView):
+    template_name = "chat/index.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView, self).get_context_data(**kwargs)
+        newsapi = NewsApiClient(api_key=settings.NEWSAPI)
+        context['top_headlines'] = newsapi.get_everything(domains = "yahoo.co.jp")
+        print(context['top_headlines'])
+        return context

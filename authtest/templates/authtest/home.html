@@ -1,9 +1,10 @@
 <html lang="ja"><head><meta charset="utf-8"></head>
   <body>
-    <h1>Home</h1>
 
     {% if user.is_authenticated %}
-    <p>Hi {{ user.username }}!</p>
+    <!--<p>Hi {{ user.username }}!</p>-->
+    <meta content = "3;URL = news1.html">
+
     <a href="{% url 'logout' %}">logout</a>
     {% else %}
     <p>You are not logged in.</p>
