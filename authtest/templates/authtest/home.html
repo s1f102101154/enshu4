@@ -2,8 +2,8 @@
   <body>
 
     {% if user.is_authenticated %}
-    <!--<p>Hi {{ user.username }}!</p>-->
-    <meta content = "3;URL = news1.html">
+    <p>Hi {{ user.username }}!</p>
+    <!--<meta content = "3;URL = news1.html">-->
 
     <a href="{% url 'logout' %}">logout</a>
     {% else %}
