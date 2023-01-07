@@ -7,7 +7,7 @@
     <form method="post">
       {% csrf_token %}
       {{ form.as_p }}
-      <input type="submit" onclick="location.href='chat/templates/news/news1.html'" value="Login" />
+      <input type="submit" value="Login" />
     </form>
 
     <p><a href="{% url 'index' %}">home</a></p>
