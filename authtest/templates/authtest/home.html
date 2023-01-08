@@ -3,7 +3,6 @@
 
     {% if user.is_authenticated %}
     <p>Hi {{ user.username }}!</p>
-    <!--<meta content = "3;URL = news1.html">-->
 
     <a href="{% url 'logout' %}">logout</a>
     {% else %}
@@ -11,8 +10,10 @@
     <p><a href="{% url 'login' %}">login</a></p>
     {% endif %}
 
+    <!--
     <hr>
     <p><a href="{% url 'priv' %}">priv</a></p>
     <p><a href="{% url 'pub' %}">public</a></p>
+    -->
 </body>
 </html>
