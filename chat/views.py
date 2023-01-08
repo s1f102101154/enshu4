@@ -51,7 +51,7 @@ class IndexView2(generic.TemplateView):
     def get_context_data(self, **kwargs):
         context = super(IndexView2, self).get_context_data(**kwargs)
         newsapi = NewsApiClient(api_key=settings.NEWSAPI)
-        context['top_headlines'] = newsapi.get_everything(q='スポーツ')
+        context['top_headlines'] = newsapi.get_everything(domains = "yahoo.co.jp", q='スポーツ')
         print(context['top_headlines'])
         return context
 
@@ -61,15 +61,15 @@ class IndexView3(generic.TemplateView):
     def get_context_data(self, **kwargs):
         context = super(IndexView3, self).get_context_data(**kwargs)
         newsapi = NewsApiClient(api_key=settings.NEWSAPI)
-        context['top_headlines'] = newsapi.get_top_headlines(q='IT')
+        context['top_headlines'] = newsapi.get_top_headlines(domains = "yahoo.co.jp", q='IT')
         print(context['top_headlines'])
         return context
 
 class IndexView4(generic.TemplateView):
-    template_name = "chat/index.html"
+    template_name = "chat/templates/news/news1.html"
 
     def get_context_data(self, **kwargs):
-        context = super(IndexView, self).get_context_data(**kwargs)
+        context = super(IndexView4, self).get_context_data(**kwargs)
         newsapi = NewsApiClient(api_key=settings.NEWSAPI)
         context['top_headlines'] = newsapi.get_everything(domains = "yahoo.co.jp")
         print(context['top_headlines'])

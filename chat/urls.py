@@ -9,10 +9,10 @@ urlpatterns = [
     path("sport", views.IndexView2.as_view(), name="sport"),
     path("it", views.IndexView3.as_view(), name="it"),
     path("animal", views.animal, name="animal"),
-    path("home", views.IndexView4.as_view(), name="home"),
+    #path("home", views.IndexView4.as_view(), name="home"),
 
     #記事
-    path("news1", views.news1, name="news1"),
+    path("news1", views.IndexView4.as_view(), name="news1"),
     path("news2", views.news1, name="news2"),
     path("news3", views.news1, name="news3"),
 ]
