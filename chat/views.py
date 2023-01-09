@@ -66,7 +66,7 @@ class IndexView3(generic.TemplateView):
         return context
 
 class IndexView4(generic.TemplateView):
-    template_name = "chat/templates/news/news1.html"
+    template_name = "news/news1.html"
 
     def get_context_data(self, **kwargs):
         context = super(IndexView4, self).get_context_data(**kwargs)
