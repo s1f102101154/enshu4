@@ -57,16 +57,6 @@ class IndexView5(LoginRequiredMixin,generic.TemplateView):
     def get_context_data(self, **kwargs):
         context = super(IndexView5, self).get_context_data(**kwargs)
         newsapi = NewsApiClient(api_key=settings.NEWSAPI)
-        context['top_headlines'] = newsapi.get_everything(domains = "yahoo.co.jp",q = "it")
-        print(context['top_headlines'])
-        return context
-
-class IndexView6(LoginRequiredMixin,generic.TemplateView):
-    template_name = "authtest/private5.html"
-
-    def get_context_data(self, **kwargs):
-        context = super(IndexView6, self).get_context_data(**kwargs)
-        newsapi = NewsApiClient(api_key=settings.NEWSAPI)
-        context['top_headlines'] = newsapi.get_everything(domains = "yahoo.co.jp",q = "it")
+        context['top_headlines'] = newsapi.get_everything(domains = "yahoo.co.jp",q = "政治")
         print(context['top_headlines'])
         return context

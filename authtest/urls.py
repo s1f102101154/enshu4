@@ -7,7 +7,6 @@ urlpatterns = [
     path("priv2", views.IndexView3.as_view(), name="priv2"),
     path("priv3", views.IndexView4.as_view(), name="priv3"),
     path("priv4", views.IndexView5.as_view(), name="priv4"),
-    path("priv5", views.IndexView6.as_view(), name="priv5"),
     path('pub', views.IndexView.as_view(), name='pub'),
     path("", views.IndexView.as_view(), name="index"),
 ]
