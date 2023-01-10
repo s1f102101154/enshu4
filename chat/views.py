@@ -75,3 +75,32 @@ class IndexView4(generic.TemplateView):
         print(context['top_headlines'])
         return context
 
+class IndexView5(generic.TemplateView):
+    template_name = "chat/animal.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView5, self).get_context_data(**kwargs)
+        newsapi = NewsApiClient(api_key=settings.NEWSAPI)
+        context['top_headlines'] = newsapi.get_everything(domains="yahoo.co.jp", q = "動物", page_size = 5)
+        print(context['top_headlines'])
+        return context
+
+class IndexView6(generic.TemplateView):
+    template_name = "chat/politic.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView6, self).get_context_data(**kwargs)
+        newsapi = NewsApiClient(api_key=settings.NEWSAPI)
+        context['top_headlines'] = newsapi.get_everything(domains="yahoo.co.jp", q = "政治", page_size = 5)
+        print(context['top_headlines'])
+        return context
+
+class IndexView7(generic.TemplateView):
+    template_name = "chat/wheather.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView7, self).get_context_data(**kwargs)
+        newsapi = NewsApiClient(api_key=settings.NEWSAPI)
+        context['top_headlines'] = newsapi.get_everything(domains="yahoo.co.jp", q = "天候", page_size = 5)
+        print(context['top_headlines'])
+        return context

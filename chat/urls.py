@@ -4,11 +4,11 @@ from . import views
 urlpatterns = [
     #ヘッダー
     path("", views.IndexView.as_view(), name="index"),
-    path("weather", views.weather, name="weather"),
-    path("politics", views.politics, name="politics"),
+    path("weather", views.IndexView7.as_view(), name="weather"),
+    path("politics", views.IndexView6.as_view(), name="politics"),
     path("sport", views.IndexView2.as_view(), name="sport"),
     path("it", views.IndexView3.as_view(), name="it"),
-    path("animal", views.animal, name="animal"),
+    path("animal", views.IndexView5.as_view(), name="animal"),
     #path("home", views.IndexView4.as_view(), name="home"),
 
     #記事
