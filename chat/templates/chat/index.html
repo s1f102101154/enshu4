@@ -40,12 +40,6 @@
 {% extends 'chat/base.html' %}
 
 {% block body %}
-  <a href = "http://127.0.0.1:8000">トップ</a>
-  <a href = "http://127.0.0.1:8000/weather">気象</a>
-  <a href = "http://127.0.0.1:8000/politics">政治</a>
-  <a href = "http://127.0.0.1:8000/sport">スポーツ</a>
-  <a href = "http://127.0.0.1:8000/it">IT</a>
-  <a href = "http://127.0.0.1:8000/animal">動物</a>
   <section class="hero is-dark">
     <div class="hero-body">
       <div class="container">
@@ -53,6 +47,13 @@
       </div>
     </div>
   </section>
+
+  <a href = "http://127.0.0.1:8000">トップ</a>
+  <a href = "http://127.0.0.1:8000/weather">気象</a>
+  <a href = "http://127.0.0.1:8000/politics">政治</a>
+  <a href = "http://127.0.0.1:8000/sport">スポーツ</a>
+  <a href = "http://127.0.0.1:8000/it">IT</a>
+  <a href = "http://127.0.0.1:8000/animal">動物</a>
 
   <div>
     {% for content in top_headlines.articles %}
