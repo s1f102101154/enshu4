@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>news</title>
+    <h1>NEWS</h1>
+    <a href = "http://127.0.0.1:8000">トップ</a>
+    <a href = "http://127.0.0.1:8000/politics">政治</a>
+    <a href = "http://127.0.0.1:8000/sport">スポーツ</a>
+    <a href = "http://127.0.0.1:8000/it">IT</a>
+    <form action="cgi-bin/example.cgi" method="post">
+    </form>
+</head>
+{% extends 'chat/base.html' %}
+
+{% block body %}
+  <section class="hero is-dark">
+    <div class="hero-body">
+      <div class="container">
+        <center><h1 class="title">ITに関連する記事</h1></center>
+      </div>
+    </div>
+  </section>
+
+  <div>
+    {% for content in top_headlines.articles %}
+    <div class="card">
+      <div class="media">
+      <div class="media-left">
+        <figure class="image is-48x48">
+          <img src="{{ content.urlToImage }}" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media-content">
+          <p class="title is-4">{{ content.title }}</p>
+          <p class="subtitle is-6">{{ content.author }}</p>
+        </div>
+      </div>
+
+      <div class="content">
+        {{ content.description }}
+        <br>
+        <time>{{ content.publishedAt }}</time>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+
+  </div>
+
+{% endblock %}
+</html>

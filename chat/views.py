@@ -8,7 +8,7 @@ from newsapi import NewsApiClient
 # Create your views here.
 def index(request):
     return render(request, "chat/index.html")
-
+"""
 def weather(request):
     return render(request, "chat/weather.html")
 
@@ -23,15 +23,10 @@ def it(request):
 
 def animal(request):
     return render(request, "chat/animal.html")
+"""
 
 def news1(request):
     return render(request, "news/news1.html")
-
-def news2(request):
-    return render(request, "news/news2.html")
-
-def news3(request):
-    return render(request, "news/news3.html")
 
 #
 class IndexView(generic.TemplateView):

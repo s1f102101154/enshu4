@@ -37,7 +37,7 @@ class IndexView3(LoginRequiredMixin,generic.TemplateView):
     def get_context_data(self, **kwargs):
         context = super(IndexView3, self).get_context_data(**kwargs)
         newsapi = NewsApiClient(api_key=settings.NEWSAPI)
-        context['top_headlines'] = newsapi.get_everything(domains = "yahoo.co.jp",q = "sport")
+        context['top_headlines'] = newsapi.get_everything(domains = "yahoo.co.jp",q = "スポーツ")
         print(context['top_headlines'])
         return context
 
