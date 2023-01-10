@@ -8,8 +8,6 @@ urlpatterns = [
     path("sport", views.IndexView2.as_view(), name="sport"),
     path("it", views.IndexView3.as_view(), name="it"),
 
-    #path("home", views.IndexView4.as_view(), name="home"),
-
     #記事
     path("news1", views.IndexView4.as_view(), name="news1"),
     path("news2", views.news1, name="news2"),
