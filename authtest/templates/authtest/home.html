@@ -4,17 +4,17 @@
     {% if user.is_authenticated %}
     <p>Hi {{ user.username }}!</p>
 
-    <a href="{% url 'logout' %}">logout</a>
+    <a href="{% url 'logout' %}">ログアウト</a>
     {% else %}
-    <p>You are not logged in.</p>
-    <p><a href="{% url 'login' %}">login</a></p>
+    <p>ニュースの続きを読むにはログインしてください</p>
+    <p><a href="{% url 'login' %}">ログイン</a></p>
     {% endif %}
   </head>
   <body>
 
     <hr>
-    <p><a href="{% url 'priv' %}">priv</a></p>
-    <p><a href="{% url 'pub' %}">public</a></p>
+    <p><a href="{% url 'priv' %}">ニュースの続きはこちら</a></p>
+    <p><a href="{% url 'pub' %}">トップ</a></p>
     
 </body>
 </html>
