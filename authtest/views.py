@@ -23,7 +23,6 @@ class IndexView(generic.TemplateView):
 
 class IndexView2(LoginRequiredMixin,generic.TemplateView):
     template_name = "authtest/private.html"
-    #login_url = 'authtest/home.html'
 
     def get_context_data(self, **kwargs):
         context = super(IndexView2, self).get_context_data(**kwargs)
@@ -32,3 +31,22 @@ class IndexView2(LoginRequiredMixin,generic.TemplateView):
         print(context['top_headlines'])
         return context
 
+class IndexView3(LoginRequiredMixin,generic.TemplateView):
+    template_name = "authtest/private2.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView3, self).get_context_data(**kwargs)
+        newsapi = NewsApiClient(api_key=settings.NEWSAPI)
+        context['top_headlines'] = newsapi.get_everything(domains = "yahoo.co.jp",q = "sport")
+        print(context['top_headlines'])
+        return context
+
+class IndexView4(LoginRequiredMixin,generic.TemplateView):
+    template_name = "authtest/private3.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView4, self).get_context_data(**kwargs)
+        newsapi = NewsApiClient(api_key=settings.NEWSAPI)
+        context['top_headlines'] = newsapi.get_everything(domains = "yahoo.co.jp",q = "it")
+        print(context['top_headlines'])
+        return context
