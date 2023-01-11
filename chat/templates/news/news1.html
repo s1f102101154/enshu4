@@ -35,43 +35,44 @@
   </div>
   </head>
 
-{% extends 'chat/base.html' %}
+  {% extends 'authtest/base.html' %}
 
-{% block body %}
-  <section class="hero is-dark">
-    <div class="hero-body">
-      <div class="container">
-        <center><h1 class="title">最新記事</h1></center>
-      </div>
-    </div>
-  </section>
-
-  <div>
-    {% for content in top_headlines.articles %}
-    <div class="card">
-      <div class="media">
-      <div class="media-left">
-        <figure class="image is-48x48">
-          <img src="{{ content.urlToImage }}" alt="Placeholder image">
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media-content">
-          <p class="title is-4">{{ content.title }}</p>
-          <p class="subtitle is-6">{{ content.author }}</p>
+  {% block body %}
+    <section class="hero is-dark">
+      <div class="hero-body">
+        <div class="container">
+          <center><h1 class="title">最新記事</h1></center>
         </div>
       </div>
-
-      <div class="content">
-        {{ content.description }}
-        <br>
-        <time>{{ content.publishedAt }}</time>
+    </section>
+  
+    <div>
+      {% for content in top_headlines.articles %}
+      <div class="card">
+        <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img src="{{ content.urlToImage }}" alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media-content">
+            <p class="title is-4">{{ content.title }}</p>
+            <p class="subtitle is-6">{{ content.author }}</p>
+          </div>
+        </div>
+  
+        <div class="content">
+          {{ content.description }}
+          <br>
+          <time>{{ content.publishedAt }}</time>
+        </div>
       </div>
+      {% endfor %}
+      </div>
+  
     </div>
-    {% endfor %}
-    </div>
-
-  </div>
-
-{% endblock %}
+    <a href = "http://127.0.0.1:8000/app01/">続きを読む</a>
+  {% endblock %}
+  
 </html>
