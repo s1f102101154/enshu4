@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>
-    <title>news</title>
-    <h1>NEWS</h1>
-    <a href = "http://127.0.0.1:8000">トップ</a>
-    <a href = "http://127.0.0.1:8000/sport">スポーツ</a>
-    <a href = "http://127.0.0.1:8000/it">IT</a>
-    <a href = "http://127.0.0.1:8000/politics">政治</a>
+  <meta charset="utf-8"/>
+  <title>news</title>
+  <div class="level-item">
+    <div class="field has-addons">
+    <h1 class = "title">NEWS</h1>
+    <p class = "subtitle is-6">Powered by <a href="https://newsapi.org">News API</a></p>
+    </div>
+    <div class="field has-addons">
+      <div class = "block">
+      <button class="button is-outlined">
+      <a href = "http://127.0.0.1:8000">トップ</a>
+      </button>
+      <button class="button is-outlined">
+      <a href = "http://127.0.0.1:8000/sport">スポーツ</a>
+      </button>
+      <button class="button is-outlined">
+      <a href = "http://127.0.0.1:8000/it">IT</a>
+      </button>
+      <button class="button is-outlined">
+      <a href = "http://127.0.0.1:8000/politics">政治</a>
+      </button>
+      <button class="button is-outlined">
+      <a href="http://127.0.0.1:8000/app01/" class="icon-text has-text-dark">
+      <span class="icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span>マイページ</span>
+      </a>
+    </button>
+  </div>
+    </div>
+  </div>
 </head>
 
 {% extends 'authtest/base.html' %}
