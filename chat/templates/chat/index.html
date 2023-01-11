@@ -3,13 +3,38 @@
 <head>
     <meta charset="utf-8"/>
     <title>news</title>
-    <h1>NEWS</h1>
-    <a href = "http://127.0.0.1:8000">トップ</a>
-    <a href = "http://127.0.0.1:8000/sport">スポーツ</a>
-    <a href = "http://127.0.0.1:8000/it">IT</a>
-    <a href = "http://127.0.0.1:8000/politics">政治</a>
+    <div class="level-item">
+      <div class="field has-addons">
+      <h1 class = "title">NEWS</h1>
+      <p class = "subtitle is-6">Powered by <a href="https://newsapi.org">News API</a></p>
+      </div>
+      <div class="field has-addons">
+        <div class = "block">
+        <button class="button is-outlined">
+        <a href = "http://127.0.0.1:8000">トップ</a>
+        </button>
+        <button class="button is-outlined">
+        <a href = "http://127.0.0.1:8000/sport">スポーツ</a>
+        </button>
+        <button class="button is-outlined">
+        <a href = "http://127.0.0.1:8000/it">IT</a>
+        </button>
+        <button class="button is-outlined">
+        <a href = "http://127.0.0.1:8000/politics">政治</a>
+        </button>
+        <button class="button is-outlined">
+        <a href="http://127.0.0.1:8000/app01/" class="icon-text has-text-dark">
+        <span class="icon">
+          <i class="fa fa-user"></i>
+        </span>
+        <span>マイページ</span>
+        </a>
+      </button>
+    </div>
+      </div>
+    </div>
 </head>
-
+<body>
 {% extends 'chat/base.html' %}
 
 {% block body %}
@@ -20,34 +45,37 @@
       </div>
     </div>
   </section>
-
   <div>
     {% for content in top_headlines.articles %}
     <div class="card">
       <div class="media">
       <div class="media-left">
-        <figure class="image is-48x48">
+        <figure class="image is-128x128">
           <img src="{{ content.urlToImage }}" alt="Placeholder image">
         </figure>
       </div>
-      <div class="card-content">
         <div class="media-content">
-          <p class="title is-4">{{ content.title }}</p>
+          <p class="title is-5">{{ content.title }}</p>
+          </a>
           <p class="subtitle is-6">{{ content.author }}</p>
-        </div>
-      </div>
+          <br>
 
-      <div class="content">
+
+        <p class="subtitle is-6">
         {{ content.description }}
+        </p>
         <br>
         <time>{{ content.publishedAt }}</time>
+
       </div>
     </div>
     {% endfor %}
     </div>
+  
 
   </div>
 
   <a href = "http://127.0.0.1:8000/app01/">続きを読む</a>
 {% endblock %}
+</body>
 </html>
