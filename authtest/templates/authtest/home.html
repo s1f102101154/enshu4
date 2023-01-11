@@ -2,12 +2,12 @@
   <head>
     <meta charset="utf-8">
     {% if user.is_authenticated %}
-    <p>こんにちは、 {{ user.username }}さん！</p>
+    <p><font size="5">こんにちは、 {{ user.username }}さん！</font></p>
 
-    <a href="{% url 'logout' %}">ログアウト</a>
+    <font size="4"><a href="{% url 'logout' %}">ログアウト</a></font>
     {% else %}
-    <p>ニュースの続きを読むにはログインしてください</p>
-    <p><a href="{% url 'login' %}">ログイン</a></p>
+    <p><font size="5">ニュースの続きを読むにはログインしてください</font></p>
+    <p><font size="4"><a href="{% url 'login' %}">ログイン</a></font></p>
     {% endif %}
   </head>
   <body>
@@ -17,9 +17,9 @@
     <p><a href="{% url 'priv2' %}">スポーツ記事の続きはこちら</a></p>
     <p><a href="{% url 'priv3' %}">IT記事の続きはこちら</a></p>
     <p><a href="{% url 'priv4' %}">政治記事の続きはこちら</a></p>
-    <p><a href="{% url 'pub' %}">トップ</a></p>
+    <font size="4"><p><a href="{% url 'pub' %}">トップ</a></p></font>
 
-    <body bgcolor="e6e6fa">
+    <body bgcolor="f5f5f5">
     
 </body>
 </html>
